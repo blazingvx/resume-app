@@ -1,0 +1,162 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Overall container */
+.resume-container {
+  max-width: 100%; /* Full-page width */
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3; /* Light Gray Background */
+  color: #333; /* Dark Gray Text */
+}
+
+/* Header */
+.header {
+  text-align: center;
+  background-color: #0079c1; /* ArcGIS Blue */
+  color: #fff; /* White Text */
+  padding: 20px 0;
+  position: relative;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.job-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Menu bar */
+.menu {
+  background-color: #0079c1; /* ArcGIS Blue */
+  color: #fff; /* White Text */
+  padding: 10px 0;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  font-size: 18px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff; /* White Background for Sections */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Contact Info section */
+.contact {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-icon {
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+/* Additions for the hamburger menu */
+.menu-toggle {
+  display: none;
+}
+
+.menu-toggle input {
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  background-color: #333;
+  height: 3px;
+  width: 25px;
+  margin: 5px auto;
+  transition: 0.4s;
+}
+
+.menu-toggle label {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  z-index: 2;
+  padding: 10px;
+  background-color: #0079c1; /* ArcGIS Blue */
+  color: #fff; /* White Text */
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toggle ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  transition: 0.5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.menu-toggle li {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.menu-toggle a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu-toggle a:hover {
+  color: #0079c1;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .menu-toggle input:checked ~ ul {
+    left: 0;
+  }
+}

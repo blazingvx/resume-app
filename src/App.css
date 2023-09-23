@@ -1,38 +1,103 @@
-.App {
+/* App component styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background-color: #f3f3f3;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #0079c1;
+  color: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.job-title {
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu {
+  margin-top: 20px; /* Add margin to separate name/role and menu items */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Display menu items vertically */
 }
 
-.App-link {
-  color: #61dafb;
+.menu li {
+  padding: 10px 0;
+  text-align: left; /* Align text to the left */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #0079c1;
+}
+
+.main {
+  margin-left: 310px;
+  margin-top: 20px; /* Add margin to push content below the menu */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .app {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    width: 100%; /* Full width for mobile */
+    position: static; /* Static position for mobile */
+    box-shadow: none; /* Remove box shadow for mobile */
+    margin-bottom: 20px; /* Add margin at the bottom for mobile */
+  }
+
+  .menu ul {
+    align-items: center; /* Center-align menu items in mobile view */
+  }
+
+  .menu li {
+    text-align: center; /* Center-align text in menu items for mobile view */
+  }
+
+  .main {
+    margin-left: 0; /* Remove margin for mobile */
   }
 }
